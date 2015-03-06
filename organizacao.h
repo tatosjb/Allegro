@@ -19,7 +19,6 @@ void quickSort(municao valor[], int esquerda, int direita){
 	j = direita;
 	i = esquerda;
 	x = valor[(esquerda + direita) / 2];
-
 	while(i <= j)
 	{
 		while(valor[i].mod < x.mod && i < direita)
@@ -50,44 +49,5 @@ void quickSort(municao valor[], int esquerda, int direita){
 	}
 
 }
-
-void quickSortTipo(municao valor[], int esquerda, int direita)
-{
-	int i, j;
-	municao  x, y;
-	i = esquerda;
-	j = direita;
-	x = valor[(esquerda + direita) / 2];
-
-	while(i <= j)
-	{
-		while(valor[i].tipo < x.tipo && i < direita)
-		{
-			i++;
-		}
-		while(valor[j].tipo > x.tipo && j > esquerda)
-		{
-			j--;
-		}
-		if(i <= j)
-		{
-			y = valor[i];
-			valor[i] = valor[j];
-			valor[j] = y;
-
-			i++;
-			j--;
-		}
-	}
-	if(j > esquerda)
-	{
-		quickSortTipo(valor, esquerda, j);
-	}
-	if(i < direita)
-	{
-		quickSortTipo(valor,  i, direita);
-	}
-}
-
 
 #endif

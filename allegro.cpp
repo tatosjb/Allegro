@@ -9,6 +9,8 @@ using namespace std;
 
 int main(void)
 {
+	HWND hWnd = GetConsoleWindow();
+	ShowWindow( hWnd, SW_HIDE );
 	teamwork();
 	return 0;
 }

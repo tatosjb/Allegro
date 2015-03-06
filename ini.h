@@ -43,7 +43,7 @@ bool inicializa(){
 		cout<<"Erro ao inicializar acodec";
 		return false;
 	}
-	al_reserve_samples(5);
+	al_reserve_samples(1);
 	return true;
 }
 
